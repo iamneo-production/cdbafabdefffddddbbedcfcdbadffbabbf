@@ -81,5 +81,5 @@ const Stopwatch = () =>{
             </div>
         </div>
       );
-      );
-}
+    };
+export default Stopwatch;
