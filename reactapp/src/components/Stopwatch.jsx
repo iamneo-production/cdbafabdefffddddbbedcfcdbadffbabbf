@@ -12,5 +12,29 @@ const Stopwatch = () =>{
      const[time, setTime]= useState(0);
      const[isRunning, setIsRunning] = useState(false);
 
-     
+     useEffect(() => {
+        let interval = null;
+        if(isRunning){
+            interval=setInterval(()=>{
+                setTime((time) => time + 1);
+            },1000);
+        }else if(!isRunning && time !==0){
+            clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+     },[isRunning,time]);
+
+     const handleStart = () => {
+        removeDisable();
+        removeVisible();
+        setIsRunning(true);
+     };
+
+     const handlePause = () => {
+        setIsRunning(false);
+     }
+
+     const handleResume = () => {
+        setIsRunning
+     }
 }
