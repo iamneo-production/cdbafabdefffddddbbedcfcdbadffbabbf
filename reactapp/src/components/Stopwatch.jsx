@@ -63,7 +63,23 @@ const Stopwatch = () =>{
                         <button data-testid="start" onClick={handleStart}>Start</button>
                     )
                 }
+                {
+                    isRunning && (
+                        <button data-testid="start" onClick={handlePause}>Pause</button>
+                    )
+                }
+                {
+                    !isRunning && time !==0 &&(
+                        <button data-testid="resume" onClick={handleResume}>Resume</button>
+                    )
+                }
+                {
+                    (
+                        <button data-testid="reset" onClick={handleReset} disabled={disable}>Reset</button>
+                    )
+                }
             </div>
         </div>
-      )
+      );
+      );
 }
