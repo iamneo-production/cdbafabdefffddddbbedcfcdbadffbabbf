@@ -3,4 +3,6 @@
     justify-content: center;
     gap:10px;
 }
-.time
+.timefont{
+    font-size:xx-large;
+}
