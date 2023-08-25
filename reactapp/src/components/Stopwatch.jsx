@@ -32,9 +32,23 @@ const Stopwatch = () =>{
 
      const handlePause = () => {
         setIsRunning(false);
-     }
+     };
 
      const handleResume = () => {
-        setIsRunning
-     }
+        setIsRunning(true);
+     };
+      const handleReset = () =>{
+        setTime(0);
+        removeVisible();
+        setIsRunning(false);
+      };
+
+      const formattedTime = () =>{
+        const hours = Math.floor(time/3600);
+        const minutes = Math.floor((time%3600)/60);
+        const seconds = time%60;
+
+        return `${hours.toString().padStart(2, "0")}:${minutes.toString().pad}`
+
+      }
 }
