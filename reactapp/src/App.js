@@ -5,7 +5,7 @@ function App() {
   return (
     <div className ="container">
     <div className="App">
-      <Stopwatch />
+      <Stopwatch/>
     </div>
     </div>
   );
